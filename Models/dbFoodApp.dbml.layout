@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 8.5" name="dbFoodApp">
+  <DataContextMoniker Name="/dbFoodAppDataContext" />
+  <nestedChildShapes>
+    <classShape Id="23b1dd0f-34e6-43b5-8eb6-ff326fce7841" absoluteBounds="4, 6, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dbFoodAppDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba52245c-6304-432d-b02c-40e3be88bdbf" absoluteBounds="4.0150000000000006, 6.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7801ce8-0972-4c43-8e41-e40751e6bd48" absoluteBounds="9, 2.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbFoodAppDataContext/ChiTietDatHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b91f97b-2654-47e7-81ac-c279a27d6c1b" absoluteBounds="9.015, 2.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="267eb3b1-ff69-41da-ad88-b52ba8334d1a" absoluteBounds="3.5, 2.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/dbFoodAppDataContext/ChuDe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d814eaa-e5fa-435d-a4b8-5cdd7e8d3a6e" absoluteBounds="3.515, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d2e73d00-9d6c-467f-8f8a-e111d204f465" absoluteBounds="3.625, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/dbFoodAppDataContext/CuaHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a0935667-68a4-40be-9d00-5fc6b488a435" absoluteBounds="3.64, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="36a96618-5801-450a-a72f-3670cbf8a15d" absoluteBounds="9, 4.125, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/dbFoodAppDataContext/DonDatHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e3d627e-66a9-4a0b-a5de-337ddb338990" absoluteBounds="9.015, 4.5850000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9310a6e-5e6b-4e18-a517-5842833ff14a" absoluteBounds="6.5, 5, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/dbFoodAppDataContext/KhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="057f3ec4-d18d-480f-99ad-13f6ac2ac823" absoluteBounds="6.5150000000000006, 5.4600000000000009, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed1f1979-a528-49dc-bbd6-eb1a8c8158c2" absoluteBounds="6.125, 2.125, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/dbFoodAppDataContext/MonAn" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7fff21f7-911b-40e5-91c1-27356b490fae" absoluteBounds="6.1400000000000006, 2.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10 : 4.125); (10 : 3.70359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbFoodAppDataContext/DonDatHang/DonDatHang_ChiTietDatHang" />
+      <nodes>
+        <classShapeMoniker Id="36a96618-5801-450a-a72f-3670cbf8a15d" />
+        <classShapeMoniker Id="d7801ce8-0972-4c43-8e41-e40751e6bd48" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 5.54409912109375); (9 : 5.54409912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbFoodAppDataContext/KhachHang/KhachHang_DonDatHang" />
+      <nodes>
+        <classShapeMoniker Id="d9310a6e-5e6b-4e18-a517-5842833ff14a" />
+        <classShapeMoniker Id="36a96618-5801-450a-a72f-3670cbf8a15d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.125 : 2.91429768880208); (9 : 2.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbFoodAppDataContext/MonAn/MonAn_ChiTietDatHang" />
+      <nodes>
+        <classShapeMoniker Id="ed1f1979-a528-49dc-bbd6-eb1a8c8158c2" />
+        <classShapeMoniker Id="d7801ce8-0972-4c43-8e41-e40751e6bd48" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.72199625651042); (6.125 : 2.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbFoodAppDataContext/ChuDe/ChuDe_MonAn" />
+      <nodes>
+        <classShapeMoniker Id="267eb3b1-ff69-41da-ad88-b52ba8334d1a" />
+        <classShapeMoniker Id="ed1f1979-a528-49dc-bbd6-eb1a8c8158c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 4.20755126953125); (6.125 : 4.20755126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbFoodAppDataContext/CuaHang/CuaHang_MonAn" />
+      <nodes>
+        <classShapeMoniker Id="d2e73d00-9d6c-467f-8f8a-e111d204f465" />
+        <classShapeMoniker Id="ed1f1979-a528-49dc-bbd6-eb1a8c8158c2" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

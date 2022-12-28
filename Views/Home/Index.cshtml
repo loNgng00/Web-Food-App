@@ -1,0 +1,340 @@
+﻿@model IEnumerable<WebFoodApp.Models.MonAn>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Begin Slider With Category Menu Area -->
+<div class="slider-with-banner mt-20">
+    <div class="container">
+        <div class="row">
+            <!-- Begin Category Menu Area -->
+            <div class="col-lg-3">
+                <!--Category Menu Start-->
+                <div class="category-menu category-menu-2">
+                    <div class="category-heading">
+                        <h2 class="categories-toggle"><span>categories</span></h2>
+                    </div>
+                    <div id="cate-toggle" class="category-menu-list">
+                        <ul>
+                            <li><a href="#">CƠM</a></li>
+                            <li><a href="#">PHỞ</a></li>
+                            <li><a href="#">HỦ TIẾU</a></li>
+                            <li><a href="#">CHÁO</a></li>
+                            <li><a href="#">PIZZA - MÌ Ý</a></li>
+                            <li><a href="#">GÀ RÁN</a></li>
+                            <li><a href="#">BÁNH MÌ - BURGER</a></li>
+                            <li><a href="#">ĐỒ ĂN VẶT</a></li>
+                            <li class="rx-child"><a href="#">TRÀ SỮA</a></li>
+                            <li class="rx-child"><a href="#">NƯỚC NGỌT</a></li>
+                            <li class="rx-parent">
+                                <a class="rx-default">More Categories</a>
+                                <a class="rx-show">Less Categories</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Category Menu End-->
+            </div>
+            <!-- Category Menu Area End Here -->
+            <!-- Begin Slider Area -->
+            <div class="col-lg-6 col-md-8">
+                <div class="slider-area slider-area-3 pt-sm-30 pt-xs-30 pb-xs-30">
+                    <div class="slider-active owl-carousel">
+                        <!-- Begin Single Slide Area -->
+                        <div class="single-slide align-center-left animation-style-01 bg-7">
+                            <div class="slider-progress"></div>
+                            <div class="slider-content">
+                                <h5>Sale Offer <span>-20% Off</span> This Week</h5>
+                                <h2>Chamcham Galaxy S9 | S9+</h2>
+                                <h3>Starting at <span>$589.00</span></h3>
+                                <div class="default-btn slide-btn">
+                                    <a class="links" href="shop-left-sidebar.html">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Slide Area End Here -->
+                        <!-- Begin Single Slide Area -->
+                        <div class="single-slide align-center-left animation-style-02 bg-8">
+                            <div class="slider-progress"></div>
+                            <div class="slider-content">
+                                <h5>Sale Offer <span>Black Friday</span> This Week</h5>
+                                <h2>Work Desk Surface Studio 2018</h2>
+                                <h3>Starting at <span>$1599.00</span></h3>
+                                <div class="default-btn slide-btn">
+                                    <a class="links" href="shop-left-sidebar.html">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Slide Area End Here -->
+                        <!-- Begin Single Slide Area -->
+                        <div class="single-slide align-center-left animation-style-01 bg-9">
+                            <div class="slider-progress"></div>
+                            <div class="slider-content">
+                                <h5>Sale Offer <span>-10% Off</span> This Week</h5>
+                                <h2>Phantom 4 Pro+ Obsidian</h2>
+                                <h3>Starting at <span>$809.00</span></h3>
+                                <div class="default-btn slide-btn">
+                                    <a class="links" href="shop-left-sidebar.html">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Slide Area End Here -->
+                    </div>
+                </div>
+            </div>
+            <!-- Slider Area End Here -->
+            <!-- Begin Li Banner Area -->
+            <div class="col-lg-3 col-md-4 text-center pt-sm-30">
+                <div class="li-banner">
+                    <a href="#">
+                        <img src="~/proimages/banner/bn4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="li-banner mt-15 mt-sm-30 mt-xs-25 mb-xs-5">
+                    <a href="#">
+                        <img src="~/proimages/banner/bn3.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- Li Banner Area End Here -->
+        </div>
+    </div>
+</div>
+<!-- Slider With Category Menu Area End Here -->
+<!-- Begin Li's Special Product Area -->
+<section class="product-area li-laptop-product Special-product pt-30 pb-45">
+    <div class="container">
+        <div class="row">
+            <!-- Begin Li's Section Area -->
+            <div class="col-lg-12">
+                <div class="li-section-title">
+                    <h2>
+                        <span>Hot Deals Products</span>
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="special-product-active owl-carousel">
+                        @foreach (var MonAn in Model)
+                        {
+                            <div class="col-lg-12">
+                                <!-- single-product-wrap start -->
+                                <div class="single-product-wrap">
+                                    <div class="product-image">
+                                        <a href="@Url.Action("Details", "Home", new { id = MonAn.MaMA })">
+                                            <img src="~/proimages/FoodImg/@MonAn.AnhMA" alt="@MonAn.TenMA">
+                                        </a>
+                                        <span class="sticker">New</span>
+                                    </div>
+                                    <div class="product_desc">
+                                        <div class="product_desc_info">
+                                            <div class="product-review">
+                                                <h5 class="manufacturer">
+                                                    <a href="shop-left-sidebar.html">Graphic Corner</a>
+                                                </h5>
+                                                <div class="rating-box">
+                                                    <ul class="rating">
+                                                        <li><i class="fa-regular fa-star"></i></li>
+                                                        <li><i class="fa-regular fa-star"></i></li>
+                                                        <li><i class="fa-regular fa-star"></i></li>
+                                                        <li class="no-star"><i class="fa-regular fa-star"></i></li>
+                                                        <li class="no-star"><i class="fa-regular fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <h4>
+                                                @Html.ActionLink(@MonAn.TenMA, "Details", "Home", new { id = MonAn.MaMA }, new { @class = "product_name" })
+                                            </h4>
+                                            <div class="price-box">
+                                                <span class="new-price">@MonAn.GiaBan VNĐ</span>
+                                            </div>
+                                            <div class="countersection">
+                                                <div class="li-countdown"></div>
+                                            </div>
+                                        </div>
+                                        <div class="add-actions">
+                                            <ul class="add-actions-link">
+                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single-product-wrap end -->
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Section Area End Here -->
+        </div>
+    </div>
+</section>
+<!-- Li's Special Product Area End Here -->
+<!-- Begin Li's Laptops Product | Home V2 Area -->
+<section class="product-area li-laptop-product li-laptop-product-2 pb-45">
+    <div class="container">
+        <div class="row">
+            <!-- Begin Li's Section Area -->
+            <div class="col-lg-12">
+                <div class="li-section-title">
+                    <h2>
+                        <span>Điểm Tâm Sáng</span>
+                    </h2>
+                    <ul class="li-sub-category-list">
+                        <li class="active"><a href="#">Cơm</a></li>
+                        <li><a href="#">Cháo</a></li>
+                        <li><a href="#">Hủ tiếu</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="product-active owl-carousel">
+                        @foreach (var MonAn in Model)
+                        {
+                            <div class="col-lg-12">
+                                <!-- single-product-wrap start -->
+                                <div class="single-product-wrap">
+                                    <div class="product-image">
+                                        <a href="single-product.html">
+                                            <img src="~/proimages/FoodImg/@MonAn.AnhMA" alt="@MonAn.TenMA">
+                                        </a>
+                                        <span class="sticker">New</span>
+                                    </div>
+                                    <div class="product_desc">
+                                        <div class="product_desc_info">
+                                            <div class="product-review">
+                                                <h5 class="manufacturer">
+                                                    <a href="shop-left-sidebar.html">Graphic Corner</a>
+                                                </h5>
+                                                <div class="rating-box">
+                                                    <ul class="rating">
+                                                        <li><i class="fa-regular fa-star"></i></li>
+                                                        <li><i class="fa-regular fa-star"></i></li>
+                                                        <li><i class="fa-regular fa-star"></i></li>
+                                                        <li class="no-star"><i class="fa-regular fa-star"></i></li>
+                                                        <li class="no-star"><i class="fa-regular fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <h4><a class="product_name" href="single-product.html">@MonAn.TenMA</a></h4>
+                                            <div class="price-box">
+                                                <span class="new-price">@MonAn.GiaBan VNĐ</span>
+                                            </div>
+                                        </div>
+                                        <div class="add-actions">
+                                            <ul class="add-actions-link">
+                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single-product-wrap end -->
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Section Area End Here -->
+        </div>
+    </div>
+</section>
+<!-- Li's Laptops Product | Home V2 Area End Here -->
+<!-- Begin Li's Static Home Area -->
+<div class="li-static-home pb-45">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Begin Li's Static Home Image Area -->
+                <div class="li-static-home-image"></div>
+                <!-- Li's Static Home Image Area End Here -->
+                <!-- Begin Li's Static Home Content Area -->
+                <div class="li-static-home-content">
+                    <p>Sale Offer<span>-20% Off</span>This Week</p>
+                    <h2>Featured Product</h2>
+                    <h2>Meito Accessories 2018</h2>
+                    <p class="schedule">
+                        Starting at
+                        <span> $1209.00</span>
+                    </p>
+                    <div class="default-btn">
+                        <a href="shop-left-sidebar.html" class="links">Order Now</a>
+                    </div>
+                </div>
+                <!-- Li's Static Home Content Area End Here -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Li's Static Home Area End Here -->
+<!-- Begin Li's TV & Audio Product Area -->
+<section class="product-area li-laptop-product li-tv-audio-product-2 pb-45">
+    <div class="container">
+        <div class="row">
+            <!-- Begin Li's Section Area -->
+            <div class="col-lg-12">
+                <div class="li-section-title">
+                    <h2>
+                        <span>Fast Food</span>
+                    </h2>
+                    <ul class="li-sub-category-list">
+                        <li class="active"><a href="#">Bánh mì</a></li>
+                        <li><a href="#">Burger</a></li>
+                        <li><a href="#">Trà sữa</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="product-active owl-carousel">
+                        @foreach (var MonAn in Model)
+                        {
+                            <div class="col-lg-12">
+                                <!-- single-product-wrap start -->
+                                <div class="single-product-wrap">
+                                    <div class="product-image">
+                                        <a href="single-product.html">
+                                            <img src="~/proimages/FoodImg/@MonAn.AnhMA" alt="@MonAn.TenMA">
+                                        </a>
+                                        <span class="sticker">New</span>
+                                    </div>
+                                    <div class="product_desc">
+                                        <div class="product_desc_info">
+                                            <div class="product-review">
+                                                <h5 class="manufacturer">
+                                                    <a href="shop-left-sidebar.html">Graphic Corner</a>
+                                                </h5>
+                                                <div class="rating-box">
+                                                    <ul class="rating">
+                                                        <li><i class="fa-regular fa-star"></i></li>
+                                                        <li><i class="fa-regular fa-star"></i></li>
+                                                        <li><i class="fa-regular fa-star"></i></li>
+                                                        <li class="no-star"><i class="fa-regular fa-star"></i></li>
+                                                        <li class="no-star"><i class="fa-regular fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <h4><a class="product_name" href="single-product.html">@MonAn.TenMA</a></h4>
+                                            <div class="price-box">
+                                                <span class="new-price">@MonAn.GiaBan VNĐ</span>
+                                            </div>
+                                        </div>
+                                        <div class="add-actions">
+                                            <ul class="add-actions-link">
+                                                <li class="add-cart active"><a href="#">Add to cart</a></li>
+                                                <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single-product-wrap end -->
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Section Area End Here -->
+        </div>
+    </div>
+</section>
+<!-- Li's TV & Audio Product Area End Here -->

@@ -1,0 +1,79 @@
+﻿@model WebFoodApp.Models.KhachHang
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="breadcrumb-area">
+    <div class="container">
+        <div class="breadcrumb-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Register</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="page-section mb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
+                <form action="#">
+                    <div class="login-form">
+                        <h4 class="login-title">Register</h4>
+                        <div class="row">
+                            @using (Html.BeginForm())
+                            {
+                                @Html.ValidationSummary(true)
+                                <div class="col-md-6 col-12 mb-20">
+                                    <label>Họ Và Tên</label>
+                                    @Html.TextBox("HoTen")
+                                    @ViewData["Loi1"]
+
+                                </div>
+                                <div class="col-md-6 col-12 mb-20">
+                                    <label>Tên Đăng Nhập</label>
+                                    @Html.TextBox("TenDN")
+                                    @ViewData["Loi2"]
+                                </div>
+                                <div class="col-md-12 mb-20">
+                                    <label>Địa Chỉ Email*</label>
+                                    @Html.TextBox("Email")
+                                    @ViewData["Loi3"]
+                                </div>
+                                <div class="col-md-6 mb-20">
+                                    <label>Mật Khẩu</label>
+                                    @Html.TextBox("MatKhau")
+                                    @ViewData["Loi4"]
+                                </div>
+                                <div class="col-md-6 mb-20">
+                                    <label>Nhập Lại Mật Khẩu</label>
+                                    @Html.TextBox("MatKhauNhapLai")
+                                    @ViewData["Loi5"]
+                                </div>
+                                <div class="col-md-6 mb-20">
+                                    <label>Điện thoại</label>
+                                    @Html.TextBox("DienThoai")
+                                    @ViewData["Loi6"]
+                                </div>
+                                <div class="col-md-6 mb-20">
+                                    <label>Địa chỉ</label>
+                                    @Html.TextBox("Diachi")
+                                    @ViewData["Loi7"]
+                                </div>
+                                <div class="col-md-6 mb-20">
+                                    <label>Ngày sinh</label>
+                                    <input type="date" name="Ngaysinh" />
+                                </div>
+                                <div class="col-12">
+                                    <button class="register-button mt-0">Register</button>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,349 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50E8EAFA-3F50-4140-94C9-1CF0F2184109}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebFoodApp</RootNamespace>
+    <AssemblyName>WebFoodApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Contents\all.min.css" />
+    <Content Include="Contents\animate.css" />
+    <Content Include="Contents\bootstrap.min.css" />
+    <Content Include="Contents\font-awesome.min.css" />
+    <Content Include="Contents\fontawesome-stars.css" />
+    <Content Include="Contents\fontawesome.css" />
+    <Content Include="Contents\fontawesome.min.css" />
+    <Content Include="Contents\helper.css" />
+    <Content Include="Contents\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Contents\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Contents\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Contents\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Contents\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Contents\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Contents\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Contents\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Contents\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Contents\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Contents\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Contents\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Contents\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Contents\jquery-ui.min.css" />
+    <Content Include="Contents\magnific-popup.css" />
+    <Content Include="Contents\material-design-iconic-font.min.css" />
+    <Content Include="Contents\meanmenu.css" />
+    <Content Include="Contents\nice-select.css" />
+    <Content Include="Contents\owl.carousel.min.css" />
+    <Content Include="Contents\owl.video.play.png" />
+    <Content Include="Contents\responsive.css" />
+    <Content Include="Contents\Site.css" />
+    <Content Include="Contents\slick.css" />
+    <Content Include="Contents\style.css" />
+    <Content Include="Contents\venobox.css" />
+    <Content Include="Fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\about-us\icon\1.png" />
+    <Content Include="Images\about-us\icon\2.png" />
+    <Content Include="Images\about-us\icon\3.png" />
+    <Content Include="Images\about-us\icon\4.png" />
+    <Content Include="Images\blog-banner\1.jpg" />
+    <Content Include="Images\blog-banner\2.jpg" />
+    <Content Include="Images\blog-banner\3.jpg" />
+    <Content Include="Images\blog-banner\5.jpg" />
+    <Content Include="Images\blog-banner\6.jpg" />
+    <Content Include="Images\blog-banner\bg-banner.jpg" />
+    <Content Include="Images\blog-banner\large-size\1.jpg" />
+    <Content Include="Images\blog-banner\large-size\2.jpg" />
+    <Content Include="Images\blog-banner\large-size\3.jpg" />
+    <Content Include="Images\favicon.jpg" />
+    <Content Include="Images\featured-product\1.jpg" />
+    <Content Include="Images\featured-product\2.jpg" />
+    <Content Include="Images\featured-product\3.jpg" />
+    <Content Include="Images\featured-product\4.jpg" />
+    <Content Include="Images\featured-product\5.jpg" />
+    <Content Include="Images\featured-product\6.jpg" />
+    <Content Include="Images\menu\flag-icon\1.jpg" />
+    <Content Include="Images\menu\flag-icon\2.jpg" />
+    <Content Include="Images\menu\li-bg-menu.jpg" />
+    <Content Include="Images\payment\1.png" />
+    <Content Include="Images\product-details\1.jpg" />
+    <Content Include="Images\product-details\admin.png" />
+    <Content Include="Images\product-details\user.png" />
+    <Content Include="Images\product\large-size\1.jpg" />
+    <Content Include="Images\product\large-size\10.jpg" />
+    <Content Include="Images\product\large-size\11.jpg" />
+    <Content Include="Images\product\large-size\12.jpg" />
+    <Content Include="Images\product\large-size\13.jpg" />
+    <Content Include="Images\product\large-size\2.jpg" />
+    <Content Include="Images\product\large-size\3.jpg" />
+    <Content Include="Images\product\large-size\4.jpg" />
+    <Content Include="Images\product\large-size\5.jpg" />
+    <Content Include="Images\product\large-size\6.jpg" />
+    <Content Include="Images\product\large-size\7.jpg" />
+    <Content Include="Images\product\large-size\8.jpg" />
+    <Content Include="Images\product\large-size\9.jpg" />
+    <Content Include="Images\product\small-size\1.jpg" />
+    <Content Include="Images\product\small-size\2.jpg" />
+    <Content Include="Images\product\small-size\3.jpg" />
+    <Content Include="Images\product\small-size\4.jpg" />
+    <Content Include="Images\product\small-size\5.jpg" />
+    <Content Include="Images\product\small-size\6.jpg" />
+    <Content Include="Images\shipping-icon\1.png" />
+    <Content Include="Images\shipping-icon\2.png" />
+    <Content Include="Images\shipping-icon\3.png" />
+    <Content Include="Images\shipping-icon\4.png" />
+    <Content Include="Images\slider\1.jpg" />
+    <Content Include="Images\slider\10.jpg" />
+    <Content Include="Images\slider\11.jpg" />
+    <Content Include="Images\slider\12.jpg" />
+    <Content Include="Images\slider\2.jpg" />
+    <Content Include="Images\slider\3.jpg" />
+    <Content Include="Images\slider\4.jpg" />
+    <Content Include="Images\slider\5.jpg" />
+    <Content Include="Images\slider\6.jpg" />
+    <Content Include="Images\slider\7.jpg" />
+    <Content Include="Images\slider\8.jpg" />
+    <Content Include="Images\slider\9.jpg" />
+    <Content Include="Images\static-top\1.jpg" />
+    <Content Include="Images\team\1.png" />
+    <Content Include="Images\team\2.png" />
+    <Content Include="Images\team\3.png" />
+    <Content Include="Images\team\4.png" />
+    <Content Include="Images\wishlist-thumb\1.jpg" />
+    <Content Include="Images\wishlist-thumb\2.jpg" />
+    <Content Include="Images\wishlist-thumb\3.jpg" />
+    <Content Include="proimages\banner\bn1.jpg" />
+    <Content Include="proimages\banner\bn2.jpg" />
+    <Content Include="proimages\banner\bn3.jpg" />
+    <Content Include="proimages\banner\bn4.jpg" />
+    <Content Include="proimages\FoodImg\banhmibd.jpg" />
+    <Content Include="proimages\FoodImg\bunbohue.jpg" />
+    <Content Include="proimages\FoodImg\bundaumt.jpg" />
+    <Content Include="proimages\FoodImg\ccduongchau.jpg" />
+    <Content Include="proimages\FoodImg\comgaxm.jpg" />
+    <Content Include="proimages\FoodImg\comsuonbicha.jpg" />
+    <Content Include="proimages\FoodImg\goidudu.jpg" />
+    <Content Include="proimages\FoodImg\hamburger.jpg" />
+    <Content Include="proimages\FoodImg\laugalae.jpg" />
+    <Content Include="proimages\FoodImg\suatuoictdd.jpg" />
+    <Content Include="proimages\slider\sd1.jpeg" />
+    <Content Include="proimages\slider\sd2.jpeg" />
+    <Content Include="proimages\slider\sd3.jpeg" />
+    <Content Include="proimages\slider\sd4.jpeg" />
+    <Content Include="Scripts\ajax-mail.js" />
+    <Content Include="Scripts\all.min.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\imagesloaded.pkgd.min.js" />
+    <Content Include="Scripts\isotope.pkgd.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.barrating.min.js" />
+    <Content Include="Scripts\jquery.countdown.min.js" />
+    <Content Include="Scripts\jquery.counterup.min.js" />
+    <Content Include="Scripts\jquery.magnific-popup.min.js" />
+    <Content Include="Scripts\jquery.meanmenu.min.js" />
+    <Content Include="Scripts\jquery.mixitup.min.js" />
+    <Content Include="Scripts\jquery.nice-select.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\owl.carousel.min.js" />
+    <Content Include="Scripts\scrollUp.min.js" />
+    <Content Include="Scripts\slick.min.js" />
+    <Content Include="Scripts\vendor\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="Scripts\vendor\popper.min.js" />
+    <Content Include="Scripts\venobox.min.js" />
+    <Content Include="Scripts\waypoints.min.js" />
+    <Content Include="Scripts\wow.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\dbFoodApp.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbFoodApp.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="Fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Fonts\Material-Design-Iconic-Fontd1f1.ttf" />
+    <Content Include="Fonts\Material-Design-Iconic-Fontd1f1.woff" />
+    <Content Include="Fonts\Material-Design-Iconic-Fontd1f1.woff2" />
+    <Content Include="Models\dbFoodApp.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbFoodApp.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\dbFoodApp.dbml.layout">
+      <DependentUpon>dbFoodApp.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\ShoppingCart\Cart.cshtml" />
+    <Content Include="Views\Product\Category.cshtml" />
+    <Content Include="Views\Product\CuaHang.cshtml" />
+    <Content Include="Views\Product\SPTheocate.cshtml" />
+    <Content Include="Views\Product\SPTheocuahang.cshtml" />
+    <Content Include="Views\Home\CartPartial.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57534</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57534/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

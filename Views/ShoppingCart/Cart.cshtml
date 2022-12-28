@@ -1,0 +1,88 @@
+﻿@using WebFoodApp.Models
+@model List<Cart>
+@{
+    ViewBag.Title = "Cart";
+}
+
+<!-- Begin Li's Breadcrumb Area -->
+<div class="breadcrumb-area">
+    <div class="container">
+        <div class="breadcrumb-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Shopping Cart</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Li's Breadcrumb Area End Here -->
+<!--Shopping Cart Area Strat-->
+<div class="Shopping-cart-area pt-60 pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="#">
+                    <div class="table-content table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="cart-product-name">Tên món ăn</th>
+                                    <th class="li-product-thumbnail">Hình ảnh món ăn</th>
+                                    <th class="li-product-quantity">Số lượng</th>
+                                    <th class="li-product-price">Đơn giá</th>
+                                    <th class="li-product-subtotal">Thành tiền</th>
+                                    <th class="li-product-remove">Chi tiết</th>
+                                    <th class="li-product-remove">Xóa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <td class="li-product-name"><a href="#">@item.STenMA</a></td>
+
+                                    <td class="li-product-thumbnail"><img src="~/proimages/FoodImg/@item.SAnhMA" alt="@item.STenMA" width="200px" height="100px"></td>
+                                    <td class="quantity">
+                                        @item.ISoluong
+                                    </td>
+                                    <td class="li-product-price"><span class="amount">@String.Format("{0:0,0}", item.DDongia) VNĐ</span></td>
+                                    <td class="product-subtotal"><span class="amount">@String.Format("{0:0,0}", item.DThanhtien) VNĐ</span></td>
+                                    <td class="product-subtotal"><a href="@Url.Action("Details", "Home", new { id = item.IMaMA })">chi tiết</a></td>
+                                    <td class="product-subtotal">@Html.ActionLink("Xóa", "XoaMonan", new { @iMaSp = item.IMaMA})</td>
+                                </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="coupon-all">
+                                <div class="coupon">
+                                    <input id="coupon_code" class="input-text" name="coupon_code" value="" placeholder="Coupon code" type="text">
+                                    <input class="button" name="apply_coupon" value="Apply coupon" type="submit">
+                                </div>
+                                <div class="coupon2">
+                                    <input class="button" name="update_cart" value="Update cart" type="submit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 ml-auto">
+                            <div class="cart-page-total">
+                                <h2>Cart totals</h2>
+                                <ul>
+                                    <li>Tổng số món ăn <span>@ViewBag.Tongsoluong</span></li>
+                                    <li>Tổng tiền <span>@String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ</span></li>
+                                </ul>
+                                <a href="#">Thanh toán tất cả</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Shopping Cart Area End-->

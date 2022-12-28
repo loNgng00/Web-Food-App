@@ -1,0 +1,16 @@
+﻿@model IEnumerable<WebFoodApp.Models.ChuDe>
+
+
+<h5 class="filter-sub-titel">Loại món ăn</h5>
+<div class="categori-checkbox">
+    <form action="#">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <a href="@Url.Action("SPTheocate", "Product", new { id = item.MaCD })"><input type="radio" name="product-categori active"> @item.TenChuDe</a>
+                </li>
+            }
+        </ul>
+    </form>
+</div>
